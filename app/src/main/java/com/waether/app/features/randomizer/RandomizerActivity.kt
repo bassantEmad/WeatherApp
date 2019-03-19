@@ -19,5 +19,7 @@ class RandomizerActivity : AppCompatActivity() {
         viewModel.numberLiveData.observe(this,
             Observer { random_number_textView.text = it.toString() })
 
+        button_increment.setOnClickListener { viewModel.incrementNumber() }
+
     }
 }
