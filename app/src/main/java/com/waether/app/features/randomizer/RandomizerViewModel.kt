@@ -11,11 +11,11 @@ class RandomizerViewModel : ViewModel() {
     val numberLiveData = MutableLiveData<Int>()
 
     init {
-        numberLiveData.value = DEFAULT_VALUE //randomNumberGenerator()
+        numberLiveData.value = DEFAULT_VALUE // randomNumberGenerator().toInt()
 
     }
 
-    fun incrementNumber(){
+    fun incrementNumber() {
         numberIncrementer(numberLiveData)
     }
 
