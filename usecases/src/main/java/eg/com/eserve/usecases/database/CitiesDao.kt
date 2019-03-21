@@ -13,6 +13,7 @@ interface CitiesDao {
     @Query("select * from City where City.name like '%' || :name || '%' ")
     fun queryCitiesByName(name: String): List<City>
 
+    // to check if city is marked as fav
     @Query("select * from City where City.id in (:ids)")
     fun queryCitiesByIds(ids: List<Long>): List<City>
 
